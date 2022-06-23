@@ -1,21 +1,16 @@
 #melody {
-    margin: auto;
     width: 420px;
     height: 500px;
     border: 2px solid black;
     padding-bottom: 0;
     height: 200px;
+    background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
 }
 
-.details {
+.melodyTitle {
     display: flex;
-    align-items: center;
-    flex-direction: column;
     justify-content: center;
-}
-
-.now-playing {
-    font-size: 1rem;
+    font-style: italic;
 }
 
 .controls {
@@ -52,6 +47,12 @@ i.fa-volume-up {
 
 i {
     cursor: pointer;
+    padding: 3px;
+}
+
+i:active {
+    border-radius: 50%;
+    box-shadow: 1px -5px rgb(24, 73, 84);
 }
 
 i.fa-play-circle,

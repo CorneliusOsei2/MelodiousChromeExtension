@@ -1,3 +1,4 @@
+let melodyTitle = document.querySelector('.melodyTitle');
 let progressSlider = document.querySelector('.progressSlider');
 let volumeSlider = document.querySelector('.volumeSlider');
 let currTime = document.querySelector('.currentTime');
@@ -9,14 +10,25 @@ let isPlaying = false;
 let isRandom = false;
 
 const melodySongsList = [{
+        title: 'Ketsa: Full Circles',
         music: 'MelodySongs/ketsa_full_circles.mp3'
     },
     {
+        title: 'Lobo Loco: Peaceful',
         music: 'MelodySongs/lobo_loco_peaceful.mp3'
     },
     {
+        title: 'Lobo Loco: Take My Hand',
         music: 'MelodySongs/lobo_loco_take_my_hand.mp3'
     },
+    {
+        title: 'Scott Buckley: Snowfall',
+        music: 'MelodySongs/scott_buckley_snowfall.mp3'
+    },
+    {
+        title: 'Markus Staab: Andante',
+        music: 'MelodySongs/markus_staab_andante.mp3'
+    }
 ];
 
 function loadMelody(currIndex) {
@@ -28,6 +40,7 @@ function loadMelody(currIndex) {
     progressSlider.value = 0;
 
     currSong.src = melodySongsList[currIndex].music;
+    melodyTitle.textContent = melodySongsList[currIndex].title;
     currSong.load();
 
     updateTimer = setInterval(setUpdate, 1000);
