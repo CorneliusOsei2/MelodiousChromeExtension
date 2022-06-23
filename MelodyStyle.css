@@ -1,0 +1,69 @@
+#melody {
+    margin: auto;
+    width: 420px;
+    height: 500px;
+    border: 2px solid black;
+    padding-bottom: 0;
+    height: 200px;
+}
+
+.details {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.now-playing {
+    font-size: 1rem;
+}
+
+.controls {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.control {
+    margin: auto;
+}
+
+.sliderContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.progressSlider,
+.volumeSlider {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    height: 5px;
+    background: #83a9ff;
+}
+
+i.fa-volume-down,
+i.fa-volume-up {
+    padding: 10px;
+    color: rgb(20, 2, 2);
+}
+
+i {
+    cursor: pointer;
+}
+
+i.fa-play-circle,
+i.fa-pause-circle {
+    color: rgb(1, 1, 19);
+}
+
+i.fa-step-forward,
+i.fa-step-backward {
+    color: brown;
+}
+
+.randomActive {
+    color: black;
+}
