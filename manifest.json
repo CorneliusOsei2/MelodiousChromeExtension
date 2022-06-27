@@ -1,13 +1,14 @@
 {
     "manifest_version": 3,
     "name": "Melodious Focus",
-    "version": "1.0.0",
+    "version": "0.0.0.1",
     "icons": { "128": "128.png" },
-    "browser_action": {
+    "description": "Plays melodies to enhance focus while working",
+    "action": {
         "default_icon": "icon.png",
         "default_popup": "MelodyPlayer.html"
     },
-    "permissions": ["activeTab"]
+    "permissions": [""]
 
 
 }

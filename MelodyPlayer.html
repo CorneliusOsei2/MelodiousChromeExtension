@@ -18,41 +18,35 @@
     <main id="melody">
 
         <div class="title">
-            <h3 class="melodyTitle"></h3>
+            <p class="melodyTitle"></p>
         </div>
         <div class="sliderContainer">
             <div class="currentTime">00:00</div>
-            <input type="range" min="1" max="100" value="0" class="progressSlider" onchange="trackProgress()">
+            <input type="range" min="1" max="100" value="0" class="progressSlider">
             <div class="totalDuration">00:00</div>
         </div>
 
-        <div class="sliderContainer">
-            <i class="fa fa-volume-down"></i>
-            <input type="range" min="1" max="100" value="99" class="volumeSlider" onchange="setVolume()">
-            <i class="fa fa-volume-up"></i>
-        </div>
-
         <div class="controls">
-            <div class="control randomBtn" onclick="randomMelody()">
-                <i class="fas fa-random fa-2x" title="random"></i>
+            <div class="control randomBtn">
+                <i class="fas fa-random fa-1x" title="random"></i>
             </div>
-            <div class="control prevBtn" onclick="prevMelody()">
-                <i class="fa fa-step-backward fa-2x"></i>
+            <div class="control prevBtn">
+                <i class="fa fa-step-backward fa-1x"></i>
             </div>
-            <div class="control playpauseBtn" onclick="playpauseMelody()">
-                <i class="fa fa-play-circle fa-5x"></i>
+            <div class="control playpauseBtn">
+                <i class="fa fa-play-circle fa-2x"></i>
             </div>
-            <div class="control nextBtn" onclick="nextMelody()">
-                <i class="fa fa-step-forward fa-2x"></i>
+            <div class="control nextBtn">
+                <i class="fa fa-step-forward fa-1x "></i>
             </div>
-            <div class="control repeatBtn" onclick="repeatMelody()">
-                <i class="fa fa-repeat fa-2x" title="repeat"></i>
+            <div class="control repeatBtn">
+                <i class="fa fa-repeat fa-1x " title="repeat "></i>
             </div>
         </div>
 
     </main>
 
-    <script src="MelodyScript.js"></script>
+    <script src="MelodyScript.js "></script>
 
 </body>
 

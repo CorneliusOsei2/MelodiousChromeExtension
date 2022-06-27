@@ -1,6 +1,5 @@
 let melodyTitle = document.querySelector('.melodyTitle');
 let progressSlider = document.querySelector('.progressSlider');
-let volumeSlider = document.querySelector('.volumeSlider');
 let currTime = document.querySelector('.currentTime');
 let totalDuration = document.querySelector('.totalDuration');
 let randomIcon = document.querySelector('.fa-random');
@@ -8,6 +7,7 @@ let currSong = document.createElement('audio');
 let currIndex = 0;
 let isPlaying = false;
 let isRandom = false;
+
 
 const melodySongsList = [{
         title: 'Ketsa: Full Circles',
@@ -66,14 +66,14 @@ function playMelody() {
     let playpauseBtn = document.querySelector('.playpauseBtn');
     currSong.play();
     isPlaying = true;
-    playpauseBtn.innerHTML = '<i class="fa fa-pause-circle fa-5x"></i>';
+    playpauseBtn.innerHTML = '<i class="fa fa-pause-circle fa-2x"></i>';
 }
 
 function pauseMelody() {
     let playpauseBtn = document.querySelector('.playpauseBtn');
     currSong.pause();
     isPlaying = false;
-    playpauseBtn.innerHTML = '<i class="fa fa-play-circle fa-5x"></i>';
+    playpauseBtn.innerHTML = '<i class="fa fa-play-circle fa-2x"></i>';
 }
 
 function nextMelody() {
@@ -95,9 +95,6 @@ function trackProgress() {
     currSong.currentTime = progress;
 }
 
-function setVolume() {
-    currSong.volume = volumeSlider.value / 100;
-}
 
 function setUpdate() {
     let progressLevel = 0;
@@ -119,3 +116,11 @@ function setUpdate() {
         totalDuration.textContent = durationMinutes + ":" + durationMinutes;
     }
 }
+
+
+document.getElementsByClassName("randomBtn")[0].addEventListener("click", randomMelody);
+document.getElementsByClassName("prevBtn")[0].addEventListener("click", prevMelody);
+document.getElementsByClassName("playpauseBtn")[0].addEventListener("click", playpauseMelody);
+document.getElementsByClassName("nextBtn")[0].addEventListener("click", nextMelody);
+document.getElementsByClassName("repeatBtn")[0].addEventListener("click", repeatMelody);
+document.getElementsByClassName("progressSlider")[0].addEventListener("click", trackProgress);
